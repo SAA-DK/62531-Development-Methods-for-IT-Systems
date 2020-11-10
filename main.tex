@@ -1,0 +1,42 @@
+% dokument type
+\documentclass[11pt,a4paper]{article}
+
+% pakker, der bruges
+\input{./Packages.tex}
+\usepackage[utf8]{inputenc}
+% hjælpekommandoer
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathcal{T}}
+
+
+%til at lave linje i matrice:
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\captionsetup[table]{name= Tabel}
+
+% hoveddokument
+\begin{document}
+% forside
+\include{Forside}
+
+\newpage
+\renewcommand{\contentsname}{Indholdsfortegnelse}
+\tableofcontents
+
+\newpage
+\include{Emner/WaterfallAndAgile}
+
+\newpage
+\include{Emner/UseCase}
+
+
+
+
+
+
+\end{document}
